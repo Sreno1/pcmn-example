@@ -34,7 +34,6 @@
 				'link_before'    => '<span itemprop="name">',
 				'link_after'     => '</span>'
 			) ); ?>
-            <div id="search"><?php get_search_form(); ?></div>
         </nav>
     </header>
     <div id="container">
