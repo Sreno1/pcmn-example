@@ -1,4 +1,4 @@
-# PCM Nurture Example Theme
+# Lykins PCM Nurture Example Theme
 ## Created by Steven Lykins
 
 ---
