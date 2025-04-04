@@ -17,6 +17,9 @@ function pcmnnurture_enqueue_styles()
 	// enqueue Bootstrap CSS
 	wp_enqueue_style('bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css', array(), '5.1.3');
 
+	// enqueue bootstrap icons css
+	wp_enqueue_style('bootstrap-icons', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css', array(), '1.11.3');
+
 	// enqueue typography css
 	wp_enqueue_style('typography-style', STYLESHEET_DIR_URI . '/src/css/typography.css');
 

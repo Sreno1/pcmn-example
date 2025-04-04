@@ -3,5 +3,6 @@ git setup                               - 15 min
 skeleton selection + theme setup        - 1hr
 WordPress configuration                 - 30 min
 button, color & typography globals      - 30 min
-custom navigation walker                - 1 hr
-header & nav styling                    - 1.5 hr
+custom navigation walker                - 1.5 hr
+header & nav styling & animation        - 1.5 hr
+mobile header updates                   - 30 min
