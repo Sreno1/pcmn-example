@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "Thicccboi";
+    src: url("/wp-content/themes/pcmn-example/assets/fonts/THICCCBOI-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Thicccboi";
+    src: url("/wp-content/themes/pcmn-example/assets/fonts/THICCCBOI-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+div, p, h1, h2, h3, h4, h5, h6, li, span {
+    font-family: "Thicccboi", sans-serif;
+}

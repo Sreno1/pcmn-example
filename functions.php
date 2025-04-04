@@ -1,8 +1,22 @@
 <?php
+
+// define global variables
+define('TEMPLATE_DIR_URL', get_template_directory());
+define('STYLESHEET_DIR_URI', get_template_directory_uri());
+
+// add logo support
+add_theme_support( 'custom-logo' );
+
+// require custom header menu
+require_once TEMPLATE_DIR_URL . '/inc/custom_header_menu.php';
+
+// require enqueue scripts
+require_once TEMPLATE_DIR_URL . '/inc/enqueues.php';
+
 add_action('after_setup_theme', 'pcmnnurture_setup');
 function pcmnnurture_setup()
 {
-    load_theme_textdomain('pcmnnurture', get_template_directory() . '/languages');
+	load_theme_textdomain('pcmnnurture', TEMPLATE_DIR_URL . '/languages');
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
     add_theme_support('responsive-embeds');
@@ -15,13 +29,6 @@ function pcmnnurture_setup()
         $content_width = 1920;
     }
     register_nav_menus(array('main-menu' => esc_html__('Main Menu', 'pcmnnurture')));
-}
-
-add_action('wp_enqueue_scripts', 'pcmnnurture_enqueue');
-function pcmnnurture_enqueue()
-{
-    wp_enqueue_style('pcmnnurture-style', get_stylesheet_uri());
-    wp_enqueue_script('jquery');
 }
 
 add_action('wp_footer', 'pcmnnurture_footer');
@@ -154,31 +161,46 @@ function pcmnnurture_pingback_header()
     }
 }
 
-add_action('comment_form_before', 'pcmnnurture_enqueue_comment_reply_script');
-function pcmnnurture_enqueue_comment_reply_script()
-{
-    if (get_option('thread_comments')) {
-        wp_enqueue_script('comment-reply');
-    }
-}
+// Allow SVG
+add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mimes) {
 
-function pcmnnurture_custom_pings($comment)
-{
-    ?>
-    <li <?php comment_class(); ?>
-            id="li-comment-<?php comment_ID(); ?>"><?php echo esc_url(comment_author_link()); ?></li>
-    <?php
-}
+	global $wp_version;
+	if ( $wp_version !== '4.7.1' ) {
+		return $data;
+	}
 
-add_filter('get_comments_number', 'pcmnnurture_comment_count', 0);
-function pcmnnurture_comment_count($count)
-{
-    if (!is_admin()) {
-        global $id;
-        $get_comments = get_comments('status=approve&post_id=' . $id);
-        $comments_by_type = separate_comments($get_comments);
-        return count($comments_by_type['comment']);
-    } else {
-        return $count;
-    }
+	$filetype = wp_check_filetype( $filename, $mimes );
+
+	return [
+		'ext'             => $filetype['ext'],
+		'type'            => $filetype['type'],
+		'proper_filename' => $data['proper_filename']
+	];
+
+}, 10, 4 );
+
+function cc_mime_types( $mimes ){
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+}
+add_filter( 'upload_mimes', 'cc_mime_types' );
+
+function fix_svg() {
+	echo '<style type="text/css">
+        .attachment-266x266, .thumbnail img {
+             width: 100% !important;
+             height: auto !important;
+        }
+        </style>';
+}
+add_action( 'admin_head', 'fix_svg' );
+
+// add bootstrap classes to custom logo
+add_filter( 'get_custom_logo', 'change_logo_class' );
+
+function change_logo_class( $html ) {
+
+	$html = str_replace( 'custom-logo', 'me-2 d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none', $html );
+
+	return $html;
 }

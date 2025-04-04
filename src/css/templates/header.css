@@ -1,0 +1,38 @@
+#header {
+    .menu-header-menu-container {
+        height: 200%;
+        padding-top: 8%;
+    }
+    .nav {
+        height: 100%;
+    }
+    .menu-item-container {
+        line-height: 100%;
+    }
+    .submenu-item-container {
+        line-height: 200%;
+    }
+    .no-pill {
+        height: 100%;
+        display: block;
+    }
+    .menu-item {
+        margin: auto 10px;
+        color: var(--pcm-black);
+        font-size: 17px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    .dropdown-menu {
+        border-radius: 0px 8px 8px 8px;
+        padding: 10px 0 0 0;
+        width: auto;
+        border: 0px;
+        top: 50px;
+        background: var(--pcm-light-blue)
+    }
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0; /* remove the gap so it doesn't close */
+    }
+}
