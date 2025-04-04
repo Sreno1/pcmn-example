@@ -1,8 +1,10 @@
-- local installation                      - 30 min
-- git setup                               - 15 min
-- skeleton selection + theme setup        - 1hr
-- WordPress configuration                 - 30 min 
-- button, color & typography globals      - 30 min 
-- custom navigation walker                - 1.5 hr 
-- header & nav styling & animation        - 1.5 hr 
-- mobile header updates                   - 45 min
+- local installation - 30 min
+- git setup - 15 min
+- skeleton selection + theme setup - 1hr
+- WordPress configuration - 30 min
+- button, color & typography globals - 30 min
+- custom navigation walker - 1.5 hr
+- header & nav styling & animation - 1.5 hr
+- mobile header updates - 45 min
+- scss setup - 30 min
+- scss nav styling with bootstrap

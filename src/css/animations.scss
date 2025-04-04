@@ -1,9 +1,14 @@
-.hover-underline-animation {
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/mixins';
+
+@include media-breakpoint-up(lg) {
+  .hover-underline-animation {
     display: inline-block;
     position: relative;
-}
+  }
 
-.hover-underline-animation::after {
+  .hover-underline-animation::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -14,19 +19,19 @@
     background-color: var(--pcm-pink);
     transition: transform 0.25s ease-out;
     transform-origin: bottom center;
-}
+  }
 
-.hover-underline-animation:hover::after {
+  .hover-underline-animation:hover::after {
     transform: scaleX(1);
     transform-origin: bottom center;
-}
+  }
 
-.hover-sideline-animation {
+  .hover-sideline-animation {
     display: inline-block;
     position: relative;
-}
+  }
 
-.hover-sideline-animation::after {
+  .hover-sideline-animation::after {
     content: '';
     position: absolute;
     width: 2px;
@@ -37,9 +42,10 @@
     background-color: var(--pcm-pink);
     transition: transform 0.25s ease-out;
     transform-origin: 100% 50%;
-}
+  }
 
-.hover-sideline-animation:hover::after {
+  .hover-sideline-animation:hover::after {
     transform: scaleY(1);
     transform-origin: -100% 50%;
+  }
 }
