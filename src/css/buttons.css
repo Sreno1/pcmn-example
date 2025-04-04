@@ -1,0 +1,39 @@
+.solid-pill {
+  background-color: var(--pcm-pink);
+  border-radius: 25px;
+  color: white !important;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.solid-pill a, .solid-pill span {
+  color: white;
+}
+
+.solid-pill:hover {
+  background-color: var(--pcm-peach);
+  color: var(--pcm-black) !important;
+}
+
+.stroke-pill {
+  background-color: transparent;
+  border: 2px solid var(--pcm-pink);
+  border-radius: 25px;
+  color: var(--pcm-pink);
+  padding: 9px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.stroke-pill:hover {
+  background-color: var(--pcm-pink);
+  color: white !important;
+}
+
+/*# sourceMappingURL=buttons.css.map */
