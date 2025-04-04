@@ -35,6 +35,7 @@
         top: 50px;
         background: var(--pcm-light-blue)
     }
+    /* TODO: add scss breakpoints for bootstrap */
     @include media-breakpoint-up(lg) {
         .dropdown:hover .dropdown-menu {
             display: block;
