@@ -2,7 +2,7 @@
 </div>
 <footer id="footer" role="contentinfo">
     <div id="footer-content"
-         class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 justify-content-center text-center text-md-start">
+         class="row row-cols-1 row-cols-sm-2 row-cols-md-5 pt-5 pb-3 mt-5 justify-content-center text-center text-md-start">
         <div class="col mb-3">
 			<?php if ( is_active_sidebar( 'footer-widget-area-1' ) ) : ?>
                 <div class="widget-area">
