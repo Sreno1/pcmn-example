@@ -12,3 +12,4 @@
 - footer widget setup - 30 min
 - footer menu setup - 30 min
 - header touchups - 15 min
+- block registration & test on Siteground - 1 hr
