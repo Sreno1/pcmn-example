@@ -1,1 +1,0 @@
-console.log("Hello World! (from pcmn-blocks-email-cta-masthead block)");

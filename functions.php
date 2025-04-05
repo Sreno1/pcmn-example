@@ -237,6 +237,51 @@ function change_logo_class( $html ) {
 	return $html;
 }
 
+// add custom field and true/false selector metabox "hide_header" to WordPress pages
+function pcmnnurture_hide_header_metabox() {
+	add_meta_box(
+		'hide_header',
+		esc_html__( 'Hide Header', 'pcmnnurture' ),
+		'pcmnnurture_hide_header_callback',
+		'page',
+		'side'
+	);
+}
+
+add_action( 'add_meta_boxes', 'pcmnnurture_hide_header_metabox' );
+function pcmnnurture_hide_header_callback( $post ) {
+	wp_nonce_field( 'pcmnnurture_hide_header', 'pcmnnurture_hide_header_nonce' );
+	$value = get_post_meta( $post->ID, 'hide_header', true );
+	?>
+	<label for="hide_header">
+		<input type="checkbox" id="hide_header" name="hide_header" value="1" <?php checked( $value, 1 ); ?> />
+		<?php esc_html_e( 'Hide Header', 'pcmnnurture' ); ?>
+	</label>
+	<?php
+}
+
+function pcmnnurture_save_hide_header( $post_id ) {
+	if ( ! isset( $_POST['pcmnnurture_hide_header_nonce'] ) ) {
+		return;
+	}
+	if ( ! wp_verify_nonce( $_POST['pcmnnurture_hide_header_nonce'], 'pcmnnurture_hide_header' ) ) {
+		return;
+	}
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+		return;
+	}
+	if ( ! current_user_can( 'edit_post', $post_id ) ) {
+		return;
+	}
+	if ( isset( $_POST['hide_header'] ) ) {
+		update_post_meta( $post_id, 'hide_header', 1 );
+	} else {
+		delete_post_meta( $post_id, 'hide_header' );
+	}
+}
+
+add_action( 'save_post', 'pcmnnurture_save_hide_header' );
+
 // register blocks
 
 function register_blocks() {

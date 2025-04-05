@@ -13,3 +13,5 @@
 - footer menu setup - 30 min
 - header touchups - 15 min
 - block registration & test on Siteground - 1 hr
+- Add page header customization option - 15 min
+- Email CTA Header block - 1hr (so far)

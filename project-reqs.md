@@ -21,7 +21,8 @@ Program a custom WP theme from scratch or using preferred skeleton template. Inc
 - In this project, I tried to use some more advanced features of CSS3, such as nesting, variables, partials and
   operators.
 	- Also utilized SCSS for mixins, specifically with Bootstrap.
-- For the page templates, I created blocks for WordPress (by running npx @wordpress/create-block in /src/blocks) and
-  added them to the pages using the Gutenburg editor. This way, if the client wanted to add more blocks on other pages,
-  they could do so easily without further development assistance, allowing for standardized template designs to be
-  applied and edited by non-coders.
+- For the page templates, I created blocks for WordPress (by running npx @wordpress/create-block in /src/blocks, then
+  npm run build in the theme directory) and added them to the pages using the Gutenburg editor. This way, if the client
+  wanted to add more blocks on other pages, they could do so easily without further development assistance, allowing for
+  standardized template designs to be applied and edited by non-coders.
+	- Thus, I did not create a custom template for the main page.
