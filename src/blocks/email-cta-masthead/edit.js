@@ -17,7 +17,12 @@ import {
 	AlignmentControl,
 	BlockControls,
 	InspectorControls,
-	PanelColorSettings
+	PanelColorSettings,
+	TextControl,
+	PanelBody,
+	PanelRow,
+	ToggleControl,
+	ExternalLink
 } from '@wordpress/block-editor';
 
 /**
@@ -39,7 +44,19 @@ import './editor.scss';
 export default function Edit({attributes, setAttributes}) {
 	const blockProps = useBlockProps();
 
-	const {content, align, backgroundColor, textColor} = attributes;
+	const {content, align, backgroundColor, textColor, kaLink, linkLabel, hasLinkNofollow} = attributes;
+
+	const onChangeKaLink = (newKaLink) => {
+		setAttributes({kaLink: newKaLink === undefined ? '' : newKaLink})
+	}
+
+	const onChangeLinkLabel = (newLinkLabel) => {
+		setAttributes({linkLabel: newLinkLabel === undefined ? '' : newLinkLabel})
+	}
+
+	const toggleNofollow = () => {
+		setAttributes({hasLinkNofollow: !hasLinkNofollow})
+	}
 
 	const onChangeContent = (newContent) => {
 		setAttributes({content: newContent})
@@ -60,21 +77,22 @@ export default function Edit({attributes, setAttributes}) {
 		<>
 			<InspectorControls>
 				<PanelColorSettings
-					title={__('Color settings', 'ka-example-block')}
+					title={__('Color settings', 'email-cta-masthead')}
 					initialOpen={false}
 					colorSettings={[
 						{
 							value: textColor,
 							onChange: onChangeTextColor,
-							label: __('Text color', 'ka-example-block')
+							label: __('Text color', 'email-cta-masthead')
 						},
 						{
 							value: backgroundColor,
 							onChange: onChangeBackgroundColor,
-							label: __('Background color', 'ka-example-block')
+							label: __('Background color', 'email-cta-masthead')
 						}
 					]}
 				/>
+				
 			</InspectorControls>
 			<BlockControls>
 				<AlignmentControl
@@ -91,6 +109,7 @@ export default function Edit({attributes, setAttributes}) {
 				placeholder={__('Write your text...')}
 				style={{textAlign: align, backgroundColor: backgroundColor, color: textColor}}
 			/>
+
 		</>
 	);
 }

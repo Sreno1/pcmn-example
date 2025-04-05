@@ -2,14 +2,32 @@ import {__} from '@wordpress/i18n';
 import {useBlockProps, RichText} from '@wordpress/block-editor';
 
 export default function save({attributes}) {
-	const blockProps = useBlockProps.save();
-	const {content, align, backgroundColor, textColor} = attributes;
+
+	const {content, align, backgroundColor, textColor, kaLink, linkLabel, hasLinkNofollow} = attributes;
+
+	const blockProps = useBlockProps.save({
+		className: `has-text-align-${align}`
+	});
+
 	return (
-		<RichText.Content
+		<div
 			{...blockProps}
-			tagName="p"
-			value={content}
-			style={{textAlign: align, backgroundColor: backgroundColor, color: textColor}}
-		/>
+			style={{backgroundColor: backgroundColor}}
+		>
+			<RichText.Content
+				tagName="p"
+				value={content}
+				style={{color: textColor}}
+			/>
+			<p>
+				<a
+					href={kaLink}
+					className="stroke-pill"
+					rel={hasLinkNofollow ? "nofollow" : "noopener noreferrer"}
+				>
+					{linkLabel}
+				</a>
+			</p>
+		</div>
 	);
 }

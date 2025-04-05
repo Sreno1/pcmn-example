@@ -8,7 +8,7 @@
   \**************************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"pcmn-blocks/email-cta-masthead","version":"0.1.0","title":"Email CTA Masthead","category":"theme","icon":"table-col-after","description":"Header with email input and image","example":{},"supports":{"supports":{"color":{"background":false,"text":true},"html":false,"typography":{"fontSize":true}}},"attributes":{"content":{"type":"string","source":"html","selector":"p"},"align":{"type":"string","default":"none"},"backgroundColor":{"type":"string"},"textColor":{"type":"string"}},"textdomain":"email-cta-masthead","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"pcmn-blocks/email-cta-masthead","version":"0.1.0","title":"Email CTA Masthead","category":"theme","icon":"table-col-after","description":"Header with email input and image","example":{},"supports":{"supports":{"color":{"background":false,"text":true},"html":false,"typography":{"fontSize":true}}},"attributes":{"content":{"type":"string","source":"html","selector":"p"},"align":{"type":"string","default":"none"},"backgroundColor":{"type":"string"},"textColor":{"type":"string"},"kaLink":{"type":"string","default":""},"linkLabel":{"type":"string","default":"Check it out!"},"hasLinkNofollow":{"type":"boolean","default":false}},"textdomain":"email-cta-masthead","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ }),
 
@@ -70,8 +70,26 @@ function Edit({
     content,
     align,
     backgroundColor,
-    textColor
+    textColor,
+    kaLink,
+    linkLabel,
+    hasLinkNofollow
   } = attributes;
+  const onChangeKaLink = newKaLink => {
+    setAttributes({
+      kaLink: newKaLink === undefined ? '' : newKaLink
+    });
+  };
+  const onChangeLinkLabel = newLinkLabel => {
+    setAttributes({
+      linkLabel: newLinkLabel === undefined ? '' : newLinkLabel
+    });
+  };
+  const toggleNofollow = () => {
+    setAttributes({
+      hasLinkNofollow: !hasLinkNofollow
+    });
+  };
   const onChangeContent = newContent => {
     setAttributes({
       content: newContent
@@ -93,16 +111,16 @@ function Edit({
     });
   };
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.PanelColorSettings, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Color settings', 'ka-example-block'),
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Color settings', 'email-cta-masthead'),
     initialOpen: false,
     colorSettings: [{
       value: textColor,
       onChange: onChangeTextColor,
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Text color', 'ka-example-block')
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Text color', 'email-cta-masthead')
     }, {
       value: backgroundColor,
       onChange: onChangeBackgroundColor,
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Background color', 'ka-example-block')
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Background color', 'email-cta-masthead')
     }]
   })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.BlockControls, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.AlignmentControl, {
     value: align,
@@ -212,23 +230,34 @@ __webpack_require__.r(__webpack_exports__);
 function save({
   attributes
 }) {
-  const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps.save();
   const {
     content,
     align,
     backgroundColor,
-    textColor
+    textColor,
+    kaLink,
+    linkLabel,
+    hasLinkNofollow
   } = attributes;
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText.Content, {
+  const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps.save({
+    className: `has-text-align-${align}`
+  });
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ...blockProps,
+    style: {
+      backgroundColor: backgroundColor
+    }
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText.Content, {
     tagName: "p",
     value: content,
     style: {
-      textAlign: align,
-      backgroundColor: backgroundColor,
       color: textColor
     }
-  });
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
+    href: kaLink,
+    className: "stroke-pill",
+    rel: hasLinkNofollow ? "nofollow" : "noopener noreferrer"
+  }, linkLabel)));
 }
 
 /***/ }),
