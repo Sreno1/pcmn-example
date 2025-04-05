@@ -1,0 +1,80 @@
+{
+  "version": 3,
+  "settings": {
+    "spacing": {
+      "margin": true,
+      "padding": true
+    },
+    "border": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true
+    },
+    "color": {
+      "defaultPalette": false,
+      "palette": [
+        {
+          "color": "#EDF2FC",
+          "name": "Light Gray",
+          "slug": "light-gray"
+        },
+        {
+          "color": "#E62781",
+          "name": "Pink",
+          "slug": "pink"
+        },
+        {
+          "color": "#343F52",
+          "name": "PCM Black",
+          "slug": "black"
+        },
+        {
+          "color": "#60697B",
+          "name": "Gray",
+          "slug": "light-gray"
+        },
+        {
+          "color": "#F5F5FC",
+          "name": "Light Blue",
+          "slug": "light-blue"
+        },
+        {
+          "color": "#FEF3E4",
+          "name": "Light Yellow",
+          "slug": "light-yellow"
+        },
+        {
+          "color": "#EAF3EF",
+          "name": "Off White",
+          "slug": "off-white"
+        },
+        {
+          "color": "#FAE6E7",
+          "name": "Peach",
+          "slug": "peach"
+        },
+        {
+          "color": "#E0E9FA",
+          "name": "Baby Blue",
+          "slug": "baby-blue"
+        },
+        {
+          "color": "#3F78E0",
+          "name": "Blue",
+          "slug": "blue"
+        },
+        {
+          "color": "#272F3C",
+          "name": "Dark Blue",
+          "slug": "dark-blue"
+        },
+        {
+          "color": "#FFF",
+          "name": "White",
+          "slug": "white"
+        }
+      ]
+    }
+  }
+}

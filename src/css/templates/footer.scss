@@ -1,0 +1,30 @@
+#footer {
+  background-color: var(--pcm-black);
+
+  .widget-title {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .menu-item a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+
+  #copyright {
+    background: var(--pcm-dark-blue);
+    border-top: 1px solid white;
+    padding: 10%;
+
+    p {
+      color: white;
+    }
+  }
+}

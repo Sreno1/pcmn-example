@@ -66,7 +66,7 @@
     .navbar-collapse {
       height: 80px;
       line-height: 40px;
-      padding-top: 40px;
+      padding-top: 50px;
     }
 
     .menu-item-container {
@@ -75,6 +75,7 @@
 
     .submenu-item-container {
       line-height: 200%;
+      width: 100%;
     }
     .dropdown:hover .dropdown-menu {
       display: block;

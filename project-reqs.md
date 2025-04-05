@@ -15,6 +15,7 @@ Program a custom WP theme from scratch or using preferred skeleton template. Inc
 ## Notes
 
 - Added theme support for the customizer - Logo
+- Removed some theme templates, like the sidebar.php and comments.php, since they were not needed.
 - Did not register global fonts within the customizer, since almost all fonts used in the design are "THICCCBOI". If
   multiple fonts were used, I would have registered them in the customizer as header or body fonts.
 - In this project, I tried to use some more advanced features of CSS3, such as nesting, variables, partials and
