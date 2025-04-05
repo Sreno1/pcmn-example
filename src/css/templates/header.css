@@ -48,13 +48,14 @@
   #header .navbar-collapse {
     height: 80px;
     line-height: 40px;
-    padding-top: 40px;
+    padding-top: 50px;
   }
   #header .menu-item-container {
     line-height: 100%;
   }
   #header .submenu-item-container {
     line-height: 200%;
+    width: 100%;
   }
   #header .dropdown:hover .dropdown-menu {
     display: block;

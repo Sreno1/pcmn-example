@@ -7,4 +7,8 @@
 - header & nav styling & animation - 1.5 hr
 - mobile header updates - 45 min
 - scss setup - 30 min
-- scss nav styling with bootstrap
+- scss nav styling with bootstrap - 30 min
+- theme.json setup - 30 min
+- footer widget setup - 30 min
+- footer menu setup - 30 min
+- header touchups - 15 min
