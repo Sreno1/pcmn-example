@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/media-upload-ref",
+  "version": "0.1.0",
+  "title": "Media Upload Ref",
+  "category": "widgets",
+  "textdomain": "media-upload-ref",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./template.php",
+  "attributes": {
+    "avatarId": {
+      "type": "number",
+      "default": 0
+    },
+    "avatarUrl": {
+      "type": "string",
+      "default": ""
+    }
+  }
+}

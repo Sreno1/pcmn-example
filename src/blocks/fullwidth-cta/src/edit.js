@@ -1,0 +1,92 @@
+/**
+ * Retrieves the translation of text.
+ *
+ * @see https://developer.wordpress.org/block-editor/packages/packages-i18n/
+ */
+import {__} from '@wordpress/i18n';
+
+/**
+ * React hook that is used to mark the block wrapper element.
+ * It provides all the necessary props like the class name.
+ *
+ * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
+ */
+import {useBlockProps, InspectorControls} from '@wordpress/block-editor';
+import {TextControl, TextareaControl, PanelBody} from '@wordpress/components';
+
+/**
+ * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
+ * Those files can contain any CSS code that gets applied to the editor.
+ *
+ * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
+ */
+import './editor.scss';
+
+/**
+ * The edit function describes the structure of your block in the context of the
+ * editor. This represents what the editor will render when the block is used.
+ *
+ * @see https://developer.wordpress.org/block-editor/developers/block-api/block-edit-save/#edit
+ * @return {WPElement} Element to render.
+ */
+export default function Edit({attributes, setAttributes}) {
+
+	const {
+		headingStart,
+		pinkText,
+		headingEnd,
+		subheadingText,
+		inputText,
+		buttonText
+	} = attributes;
+
+	return (
+
+		<div {...useBlockProps()}>
+			<InspectorControls>
+				<PanelBody title="Block Settings">
+					<TextControl
+						label="Heading Start"
+						value={headingStart}
+						onChange={(value) => setAttributes({headingStart: value})}
+					/>
+					<TextControl
+						label="Pink Text"
+						value={pinkText}
+						onChange={(value) => setAttributes({pinkText: value})}
+					/>
+					<TextControl
+						label="Heading End"
+						value={headingEnd}
+						onChange={(value) => setAttributes({headingEnd: value})}
+					/>
+					<TextControl
+						label="Subheading Text"
+						value={subheadingText}
+						onChange={(value) => setAttributes({subheadingText: value})}
+					/>
+					<TextControl
+						label="Input Text"
+						value={inputText}
+						onChange={(value) => setAttributes({inputText: value})}
+					/>
+					<TextControl
+						label="Button Text"
+						value={buttonText}
+						onChange={(value) => setAttributes({buttonText: value})}
+					/>
+				</PanelBody>
+			</InspectorControls>
+			<div class="container">
+				<div class="row">
+					<h2>{headingStart}</h2>
+					<h2>{pinkText}</h2>
+					<h2>{headingEnd}</h2>
+					<p>{subheadingText}</p>
+					<input type="text" placeholder={inputText}/>
+					<button className="solid-pill">{buttonText}</button>
+				</div>
+			</div>
+		</div>
+	);
+}

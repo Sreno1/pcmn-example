@@ -12,3 +12,11 @@
 - footer widget setup - 30 min
 - footer menu setup - 30 min
 - header touchups - 15 min
+- block registration & test on Siteground - 1 hr
+- Add page header customization option - 15 min
+- Email CTA Header block - 2hr
+- Restructure node_modules & create new block - 15 min
+- image card block templating - 30 min
+- home services page layout - 1 hr
+- logo marquee block - 1.25 hr
+- fullwidth cta block - 45 min
