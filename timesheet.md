@@ -16,3 +16,5 @@
 - Add page header customization option - 15 min
 - Email CTA Header block - 2hr
 - Restructure node_modules & create new block - 15 min
+- image card block templating - 30 min
+- home services page layout - 1 hr
