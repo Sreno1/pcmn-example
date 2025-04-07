@@ -1,0 +1,46 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/three-testimonials/src/style.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.three-testimonials .col {
+  flex: 1;
+  border-color: #edeef2;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 8px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.06);
+}
+.three-testimonials .quotation {
+  position: absolute;
+  z-index: 1;
+  margin-top: -3%;
+  margin-left: -1%;
+}
+.three-testimonials .testName {
+  font-size: 18px;
+  font-weight: 500;
+}
+.three-testimonials .testBusName {
+  font-size: 16px;
+  color: var(--pcm-gray);
+}
+.three-testimonials p {
+  font-size: 18px;
+  position: relative;
+  z-index: 2;
+}
+.three-testimonials h2 {
+  font-size: 16px;
+  font-weight: 800;
+}
+.three-testimonials h3 {
+  font-size: 48px;
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

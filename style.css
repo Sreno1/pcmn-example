@@ -127,7 +127,7 @@ del, strike, s {
 }
 
 dt {
-	font-weight: bold
+	font-weight: 500;
 }
 
 address, cite, var {

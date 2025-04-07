@@ -34,6 +34,6 @@ $marqueeText  = $attributes['marqueeText'];
         </div>
     </div>
     <div class="marquee py-2">
-        <div><?= $marqueeText ?> TEST!</div>
+        <div><?= $marqueeText ?></div>
     </div>
 </div>

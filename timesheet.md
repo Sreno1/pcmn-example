@@ -19,3 +19,4 @@
 - image card block templating - 30 min
 - home services page layout - 1 hr
 - logo marquee block - 1.25 hr
+- fullwidth cta block - 45 min
