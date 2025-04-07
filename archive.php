@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<header class="header">
+<header class="header masthead container">
 	<h1 class="entry-title" itemprop="name"><?php the_archive_title(); ?></h1>
 	<div class="archive-meta" itemprop="description"><?php if ( '' != get_the_archive_description() ) {
 			echo esc_html( get_the_archive_description() );

@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<header class="header">
+<header class="header masthead container">
 	<?php the_post(); ?>
 	<h1 class="entry-title author" itemprop="name"><?php the_author_link(); ?></h1>
 	<div class="archive-meta" itemprop="description"><?php if ( '' != get_the_author_meta( 'user_description' ) ) {

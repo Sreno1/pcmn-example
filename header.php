@@ -10,7 +10,7 @@
 <div id="wrapper" class="hfeed">
 	<header id="header" role="banner"
 			class="d-flex flex-wrap position-absolute w-100 justify-content-between pt-4 mb-4">
-		<nav id="menu" role="navigation" class="container navbar navbar-expand-lg w-75 mx-auto" itemscope
+		<nav id="menu" role="navigation" class="container navbar navbar-expand-xl w-75 mx-auto" itemscope
 			 itemtype="https://schema.org/SiteNavigationElement">
 			<div class="container-fluid">
 				<div id="branding" class="navbar-brand me-auto">
