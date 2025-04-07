@@ -1,6 +1,5 @@
 <?php
 
-// Extract the 'title' attribute. Fallback to 'unknown'.
 $headingStart = $attributes['headingStart'];
 $headingEnd   = $attributes['headingEnd'];
 $pinkText     = $attributes['pinkText'];

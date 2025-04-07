@@ -33,5 +33,6 @@ Program a custom WP theme from scratch or using preferred skeleton template. Inc
 	- The custom block for the email CTA Masthead does include a customizable email input box and button for submission,
 	  but in a real theme I would include a Block Setting for a GravityForm or ContactForm7 ID, so that an actual
 	  working form could be loaded into the Block, instead.
-- Added the design's colors to the theme default palate, and a colors.css file, so that they could be easily used in
+- Added the design's colors to the theme default palate (theme.json), and a colors.css file, so that they could be
+  easily used in
   Gutenburg blocks and CSS.

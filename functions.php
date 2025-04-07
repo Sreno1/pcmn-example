@@ -287,6 +287,8 @@ add_action( 'save_post', 'pcmnnurture_save_hide_header' );
 function register_blocks() {
 	register_block_type( __DIR__ . '/build/blocks/email-cta-masthead/src/block.json' );
 	register_block_type( __DIR__ . '/build/blocks/image-card/src/block.json' );
+	register_block_type( __DIR__ . '/build/blocks/media-upload-ref/src/block.json' );
+	register_block_type( __DIR__ . '/build/blocks/logo-marquee/src/block.json' );
 
 }
 

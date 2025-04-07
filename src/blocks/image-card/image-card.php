@@ -12,20 +12,22 @@
  * @package           create-block
  */
 
-function create_block_email_cta_masthead_block_init() {
+function create_block_image_card_block_init() {
 
 	register_block_type(
 		plugin_dir_path( __FILE__ ) . 'build',
 		array(
-			'render_callback' => 'create_block_email_cta_masthead_render_callback',
+			'render_callback' => 'create_block_image_card_render_callback',
 		)
 	);
 }
-add_action( 'init', 'create_block_email_cta_masthead_block_init' );
+
+add_action( 'init', 'create_block_image_card_block_init' );
 
 
-function create_block_email_cta_masthead_render_callback( $atts, $content, $block) {
+function create_block_image_card_render_callback( $atts, $content, $block ) {
 	ob_start();
 	require plugin_dir_path( __FILE__ ) . 'build/template.php';
+
 	return ob_get_clean();
 }
