@@ -1,0 +1,55 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.email-cta-masthead {
+  margin-top: 6rem;
+}
+.email-cta-masthead .masthead-main-content {
+  background: var(--pcm-light-gray);
+  padding: 10rem 2rem 4rem 2rem;
+}
+.email-cta-masthead .masthead-main-content input {
+  border-radius: 8px;
+  height: 50px;
+  width: 55%;
+  border: 1px solid var(--pcm-black);
+}
+.email-cta-masthead .masthead-main-content input::-webkit-input-placeholder {
+  position: absolute;
+  right: 6px;
+  top: 5px;
+  font-size: 16px;
+}
+.email-cta-masthead .masthead-main-content button {
+  width: 30%;
+  border: 0;
+}
+.email-cta-masthead .masthead-main-content h2 {
+  font-size: 57px;
+  font-weight: bold;
+}
+.email-cta-masthead .masthead-main-content p {
+  font-size: 20px;
+  width: 80%;
+}
+.email-cta-masthead .masthead-main-content .imgCol {
+  text-align: center;
+}
+.email-cta-masthead .masthead-main-content .imgCol img {
+  width: 80%;
+}
+.email-cta-masthead .marquee {
+  background: var(--pcm-blue);
+}
+.email-cta-masthead .marquee div {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
