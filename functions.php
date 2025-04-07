@@ -289,7 +289,7 @@ function register_blocks() {
 	register_block_type( __DIR__ . '/build/blocks/image-card/src/block.json' );
 	register_block_type( __DIR__ . '/build/blocks/media-upload-ref/src/block.json' );
 	register_block_type( __DIR__ . '/build/blocks/logo-marquee/src/block.json' );
-
+	register_block_type( __DIR__ . '/build/blocks/fullwidth-cta/src/block.json' );
 }
 
 add_action( 'init', 'register_blocks' );

@@ -18,3 +18,4 @@
 - Restructure node_modules & create new block - 15 min
 - image card block templating - 30 min
 - home services page layout - 1 hr
+- logo marquee block - 1.25 hr
