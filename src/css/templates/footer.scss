@@ -1,3 +1,7 @@
+@import '../../../node_modules/bootstrap/scss/functions';
+@import '../../../node_modules/bootstrap/scss/variables';
+@import '../../../node_modules/bootstrap/scss/mixins';
+
 #footer {
 	background-color: var(--pcm-black);
 
@@ -25,6 +29,17 @@
 
 		p {
 			color: white;
+		}
+	}
+
+	.wp-block-buttons {
+		justify-content: space-around;
+		width: 75%;
+	}
+
+	@include media-breakpoint-down(lg) {
+		.wp-block-buttons {
+			margin: 0 auto;
 		}
 	}
 }
