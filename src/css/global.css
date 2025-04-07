@@ -3,5 +3,26 @@
     padding: 20px !important;
   }
 }
+.masthead {
+  margin-top: 6rem;
+  padding-top: 10rem;
+}
+
+.same-flex-height {
+  flex: 1 0 0%;
+}
+
+.card-img-contain {
+  height: 70%;
+  object-fit: contain;
+  padding: 25px;
+}
+
+.card-shadow {
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.06);
+}
+.card-rounded {
+  border-radius: 8px;
+}
 
 /*# sourceMappingURL=global.css.map */

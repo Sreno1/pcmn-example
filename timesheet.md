@@ -20,3 +20,5 @@
 - home services page layout - 1 hr
 - logo marquee block - 1.25 hr
 - fullwidth cta block - 45 min
+- features post type & archive - 1hr 45min
+- typography fixes - 15 min

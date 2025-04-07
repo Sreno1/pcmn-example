@@ -29,7 +29,7 @@ Program a custom WP theme from scratch or using preferred skeleton template. Inc
   Industries" pages).
 	- Thus, I did not create a custom template for the main page.
 	- I did create a custom template for the index page, for an example of a full template using PHP and no block
-	  editor.
+	  editor (archive-features.php)
 	- The custom block for the email CTA Masthead does include a customizable email input box and button for submission,
 	  but in a real theme I would include a Block Setting for a GravityForm or ContactForm7 ID, so that an actual
 	  working form could be loaded into the Block, instead.

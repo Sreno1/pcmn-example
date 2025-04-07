@@ -7,8 +7,17 @@ define( 'STYLESHEET_DIR_URI', get_template_directory_uri() );
 // add logo support
 add_theme_support( 'custom-logo' );
 
+// require enqueue scripts
+require_once TEMPLATE_DIR_URL . '/inc/enqueues.php';
+
 // require custom header menu walker
 require_once TEMPLATE_DIR_URL . '/inc/custom_header_menu.php';
+
+// require custom blocks
+require_once TEMPLATE_DIR_URL . '/inc/custom_blocks.php';
+
+// require custom post types
+require_once TEMPLATE_DIR_URL . '/inc/custom_post_types.php';
 
 // register footer widget areas
 function pcmnnurture_register_footer_widget_areas() {
@@ -47,9 +56,6 @@ function pcmnnurture_register_footer_widget_areas() {
 }
 
 add_action( 'widgets_init', 'pcmnnurture_register_footer_widget_areas' );
-
-// require enqueue scripts
-require_once TEMPLATE_DIR_URL . '/inc/enqueues.php';
 
 add_action( 'after_setup_theme', 'pcmnnurture_setup' );
 function pcmnnurture_setup() {
@@ -171,18 +177,6 @@ function pcmnnurture_image_insert_override( $sizes ) {
 	return $sizes;
 }
 
-add_action( 'widgets_init', 'pcmnnurture_widgets_init' );
-function pcmnnurture_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar Widget Area', 'pcmnnurture' ),
-		'id'            => 'primary-widget-area',
-		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
-		'after_widget'  => '</li>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
-}
-
 add_action( 'wp_head', 'pcmnnurture_pingback_header' );
 function pcmnnurture_pingback_header() {
 	if ( is_singular() && pings_open() ) {
@@ -281,16 +275,3 @@ function pcmnnurture_save_hide_header( $post_id ) {
 }
 
 add_action( 'save_post', 'pcmnnurture_save_hide_header' );
-
-// register blocks
-
-function register_blocks() {
-	register_block_type( __DIR__ . '/build/blocks/email-cta-masthead/src/block.json' );
-	register_block_type( __DIR__ . '/build/blocks/image-card/src/block.json' );
-	register_block_type( __DIR__ . '/build/blocks/media-upload-ref/src/block.json' );
-	register_block_type( __DIR__ . '/build/blocks/logo-marquee/src/block.json' );
-	register_block_type( __DIR__ . '/build/blocks/fullwidth-cta/src/block.json' );
-	register_block_type( __DIR__ . '/build/blocks/three-testimonials/src/block.json' );
-}
-
-add_action( 'init', 'register_blocks' );

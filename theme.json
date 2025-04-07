@@ -11,6 +11,44 @@
 			"style": true,
 			"width": true
 		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "\"THICCCBOI\", serif",
+					"name": "THICCCBOI",
+					"slug": "THICCCBOI",
+					"fontFace": [
+						{
+							"fontFamily": "THICCCBOI",
+							"fontWeight": "300",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [
+								"file:./assets/fonts/THICCCBOI-Regular.ttf"
+							]
+						},
+						{
+							"fontFamily": "THICCCBOI",
+							"fontWeight": "500",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [
+								"file:./assets/fonts/THICCCBOI-SemiBold.ttf"
+							]
+						},
+						{
+							"fontFamily": "THICCCBOI",
+							"fontWeight": "700",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [
+								"file:./assets/fonts/THICCCBOI-Bold.ttf"
+							]
+						}
+					]
+				}
+			]
+		},
 		"color": {
 			"defaultPalette": false,
 			"palette": [
