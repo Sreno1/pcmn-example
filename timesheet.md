@@ -22,3 +22,4 @@
 - fullwidth cta block - 45 min
 - features post type & archive - 1hr 45min
 - typography fixes - 15 min
+- Theme cleanup, readme and screenshot - 15 min
