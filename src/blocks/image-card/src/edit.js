@@ -12,7 +12,7 @@ import {__} from '@wordpress/i18n';
  * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
 import {useBlockProps, InspectorControls} from '@wordpress/block-editor';
-import {TextControl, ToggleControl, PanelBody} from '@wordpress/components';
+import {TextControl, TextareaControl, PanelBody} from '@wordpress/components';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -48,7 +48,7 @@ export default function Edit({attributes, setAttributes}) {
 						value={headingText}
 						onChange={(value) => setAttributes({headingText: value})}
 					/>
-					<TextControl
+					<TextareaControl
 						label="Content Text"
 						value={contentText}
 						onChange={(value) => setAttributes({contentText: value})}
@@ -67,9 +67,9 @@ export default function Edit({attributes, setAttributes}) {
 			</InspectorControls>
 			<div class="container">
 				<div class="row">
+					<img src={imageURL} alt={imageAlt}></img>
 					<h2>{headingText}</h2>
 					<p>{contentText}</p>
-					<img src={imageURL} alt={imageAlt}></img>
 				</div>
 			</div>
 		</div>

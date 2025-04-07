@@ -13,7 +13,24 @@
   color: white;
 }
 
+.solid-pill-inner a {
+  background-color: var(--pcm-pink);
+  border-radius: 25px;
+  color: white !important;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
 .solid-pill:hover {
+  background-color: var(--pcm-peach);
+  color: var(--pcm-black) !important;
+}
+
+.solid-pill-inner a:hover {
   background-color: var(--pcm-peach);
   color: var(--pcm-black) !important;
 }
