@@ -8,7 +8,7 @@
   \************************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/logo-marquee","version":"0.1.0","title":"Logo Marquee","category":"widgets","textdomain":"logo-marquee","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./template.php","attributes":{"introText":{"type":"string","default":""},"image1URL":{"type":"string","default":""},"image1Alt":{"type":"string","default":""},"image2URL":{"type":"string","default":""},"image2Alt":{"type":"string","default":""},"image3URL":{"type":"string","default":""},"image3Alt":{"type":"string","default":""},"image4URL":{"type":"string","default":""},"image4Alt":{"type":"string","default":""},"image5URL":{"type":"string","default":""},"image5Alt":{"type":"string","default":""},"image6URL":{"type":"string","default":""},"image6Alt":{"type":"string","default":""},"image7URL":{"type":"string","default":""},"image7Alt":{"type":"string","default":""}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/logo-marquee","version":"0.1.0","icon":"grid-view","title":"Logo Marquee","category":"pcm-nurture-blocks","textdomain":"logo-marquee","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./template.php","attributes":{"introText":{"type":"string","default":""},"image1URL":{"type":"string","default":""},"image1Alt":{"type":"string","default":""},"image2URL":{"type":"string","default":""},"image2Alt":{"type":"string","default":""},"image3URL":{"type":"string","default":""},"image3Alt":{"type":"string","default":""},"image4URL":{"type":"string","default":""},"image4Alt":{"type":"string","default":""},"image5URL":{"type":"string","default":""},"image5Alt":{"type":"string","default":""},"image6URL":{"type":"string","default":""},"image6Alt":{"type":"string","default":""},"image7URL":{"type":"string","default":""},"image7Alt":{"type":"string","default":""}}}');
 
 /***/ }),
 
@@ -206,11 +206,7 @@ const {
   /**
    * @see ./edit.js
    */
-  edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"],
-  /**
-   * @see ./save.js
-   */
-  save: () => null
+  edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"]
 });
 
 /***/ }),

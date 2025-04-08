@@ -18,7 +18,10 @@ $buttonText      = $attributes['buttonText'];
 		<?= $headingEnd ?></h2>
 	<h3 class="pb-3"><?= $subheadingText ?></h3>
 	<div class="fullwidth-cta__form">
-		<input type="text" placeholder="<?= $inputText ?>"/>
+		<div class="form-group">
+			<input id="email-cta" name="email-cta" class="inputText" type="text" required/>
+			<label class="form-control-label" for="email-cta"><?= $inputText ?></label>
+		</div>
 		<br/>
 		<button class="solid-pill mt-3 mb-5"><?= $buttonText ?></button>
 	</div>

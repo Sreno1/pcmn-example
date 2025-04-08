@@ -21,7 +21,10 @@ $marqueeText  = $attributes['marqueeText'];
 					</h2>
 					<p><?= $contentText ?></p>
 					<div class="email-cta-masthead__form">
-						<input type="text" placeholder="<?= $inputText ?>"/>
+						<div class="form-group">
+							<input id="email" name="email" class="inputText" type="text" required/>
+							<label class="form-control-label" for="email"><?= $inputText ?></label>
+						</div>
 						<br/>
 						<button class="solid-pill mt-3 py-3"><?= $buttonText ?></button>
 					</div>

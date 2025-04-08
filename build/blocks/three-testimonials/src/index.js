@@ -8,7 +8,7 @@
   \******************************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/three-testimonials","version":"0.1.0","title":"Three Testimonials","category":"widgets","textdomain":"three-testimonials","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./template.php","attributes":{"headingText":{"type":"string","default":""},"test1Text":{"type":"string","default":""},"test1Name":{"type":"string","default":""},"test1BusName":{"type":"string","default":""},"test2Text":{"type":"string","default":""},"test2Name":{"type":"string","default":""},"test2BusName":{"type":"string","default":""},"test3Text":{"type":"string","default":""},"test3Name":{"type":"string","default":""},"test3BusName":{"type":"string","default":""}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/three-testimonials","version":"0.1.0","icon":"format-quote","title":"Three Testimonials","category":"pcm-nurture-blocks","textdomain":"three-testimonials","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./template.php","attributes":{"headingText":{"type":"string","default":""},"test1Text":{"type":"string","default":""},"test1Name":{"type":"string","default":""},"test1BusName":{"type":"string","default":""},"test2Text":{"type":"string","default":""},"test2Name":{"type":"string","default":""},"test2BusName":{"type":"string","default":""},"test3Text":{"type":"string","default":""},"test3Name":{"type":"string","default":""},"test3BusName":{"type":"string","default":""}}}');
 
 /***/ }),
 
@@ -256,11 +256,7 @@ const {
   /**
    * @see ./edit.js
    */
-  edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"],
-  /**
-   * @see ./save.js
-   */
-  save: () => null
+  edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"]
 });
 
 /***/ }),

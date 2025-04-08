@@ -4,26 +4,24 @@
 .fullwidth-cta {
   background: var(--pcm-light-gray);
 }
-.fullwidth-cta input {
-  border-radius: 8px;
-  height: 50px;
-  border: 1px solid var(--pcm-black);
+.fullwidth-cta .form-group {
+  margin: 0 auto;
 }
 @media (min-width: 1200px) {
-  .fullwidth-cta input {
+  .fullwidth-cta .form-group {
     width: 22%;
   }
 }
 @media (min-width: 992px) {
-  .fullwidth-cta input {
+  .fullwidth-cta .form-group {
     width: 35%;
   }
 }
-.fullwidth-cta input::-webkit-input-placeholder {
-  position: absolute;
-  left: 6px;
-  top: 5px;
-  font-size: 16px;
+.fullwidth-cta input {
+  border-radius: 8px;
+  height: 50px;
+  border: 1px solid var(--pcm-black);
+  width: 100%;
 }
 .fullwidth-cta button {
   border: 0;

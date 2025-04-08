@@ -1,3 +1,33 @@
+input::placeholder {
+  position: relative !important;
+  top: 0 !important;
+}
+
+.form-group {
+  position: relative;
+  min-height: 3.5em;
+}
+
+input {
+  padding: 20px 8px 0px;
+}
+
+input.form-control {
+  height: 3em;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+label.form-control-label {
+  position: absolute;
+  font-size: 0.9rem;
+  top: 5px;
+  left: 7px;
+  font-weight: 400;
+  color: var(--pcm-gray);
+}
+
 @media (max-width: 991.98px) {
   .smallpaddingonmobile {
     padding-left: 50px !important;

@@ -11,12 +11,6 @@
   width: 55%;
   border: 1px solid var(--pcm-black);
 }
-.email-cta-masthead .masthead-main-content input::-webkit-input-placeholder {
-  position: absolute;
-  left: 6px;
-  top: 5px;
-  font-size: 16px;
-}
 .email-cta-masthead .masthead-main-content button {
   width: 30%;
   border: 0;
