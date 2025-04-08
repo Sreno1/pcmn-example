@@ -19,44 +19,6 @@ require_once TEMPLATE_DIR_URL . '/inc/custom_blocks.php';
 // require custom post types
 require_once TEMPLATE_DIR_URL . '/inc/custom_post_types.php';
 
-// register footer widget areas
-function pcmnnurture_register_footer_widget_areas() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Widget Area 1', 'pcmnnurture' ),
-		'id'            => 'footer-widget-area-1',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Widget Area 2', 'pcmnnurture' ),
-		'id'            => 'footer-widget-area-2',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Widget Area 3', 'pcmnnurture' ),
-		'id'            => 'footer-widget-area-3',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Widget Area 4', 'pcmnnurture' ),
-		'id'            => 'footer-widget-area-4',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
-}
-
-add_action( 'widgets_init', 'pcmnnurture_register_footer_widget_areas' );
-
 add_action( 'after_setup_theme', 'pcmnnurture_setup' );
 function pcmnnurture_setup() {
 	load_theme_textdomain( 'pcmnnurture', TEMPLATE_DIR_URL . '/languages' );
@@ -276,6 +238,40 @@ function pcmnnurture_save_hide_header( $post_id ) {
 
 add_action( 'save_post', 'pcmnnurture_save_hide_header' );
 
-add_theme_support( 'editor-styles' );
+// register footer widget areas
+function pcmnnurture_register_footer_widget_areas() {
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer Widget Area 1', 'pcmnnurture' ),
+		'id'            => 'footer-widget-area-1',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer Widget Area 2', 'pcmnnurture' ),
+		'id'            => 'footer-widget-area-2',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer Widget Area 3', 'pcmnnurture' ),
+		'id'            => 'footer-widget-area-3',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer Widget Area 4', 'pcmnnurture' ),
+		'id'            => 'footer-widget-area-4',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+}
 
-add_editor_style( 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' );
+add_action( 'widgets_init', 'pcmnnurture_register_footer_widget_areas' );

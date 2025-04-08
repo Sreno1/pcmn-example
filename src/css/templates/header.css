@@ -1,7 +1,15 @@
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   #header #branding img {
-    max-width: 160px;
-    padding-top: 30px;
+    padding-top: 20px;
+  }
+  #header .navbar-brand {
+    width: 80%;
+  }
+  #header .navbar-brand #site-title {
+    width: 100%;
+  }
+  #header .navbar-brand #site-title img {
+    width: 100%;
   }
 }
 #header .menu-item {
@@ -42,6 +50,7 @@
   #header .navbar-collapse {
     background: white;
     padding: 1rem;
+    z-index: 100;
   }
 }
 @media (min-width: 1200px) {

@@ -1,6 +1,5 @@
 <?php
 
-// for each out of 7
 $num = 7;
 
 $introText = $attributes['introText'];
@@ -21,7 +20,6 @@ $image6Alt = $attributes['image6Alt'];
 $image7Url = $attributes['image7URL'];
 $image7Alt = $attributes['image7Alt'];
 
-// define array
 $images = array(
 	'image1Url' => $image1Url,
 	'image1Alt' => $image1Alt,

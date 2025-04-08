@@ -8,7 +8,7 @@
   \******************************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/email-cta-masthead","version":"0.1.0","title":"Email Cta Masthead","category":"widgets","textdomain":"email-cta-masthead","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./template.php","attributes":{"headingStart":{"type":"string","default":""},"pinkText":{"type":"string","default":""},"headingEnd":{"type":"string","default":""},"contentText":{"type":"string","default":""},"inputText":{"type":"string","default":""},"buttonText":{"type":"string","default":""},"imageURL":{"type":"string","default":""},"imageAlt":{"type":"string","default":""},"marqueeText":{"type":"string","default":""}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/email-cta-masthead","version":"0.1.0","icon":"email","title":"Email Cta Masthead","category":"pcm-nurture-blocks","textdomain":"email-cta-masthead","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./template.php","attributes":{"headingStart":{"type":"string","default":""},"pinkText":{"type":"string","default":""},"headingEnd":{"type":"string","default":""},"contentText":{"type":"string","default":""},"inputText":{"type":"string","default":""},"buttonText":{"type":"string","default":""},"imageURL":{"type":"string","default":""},"imageAlt":{"type":"string","default":""},"marqueeText":{"type":"string","default":""}}}');
 
 /***/ }),
 
@@ -237,11 +237,7 @@ const {
   /**
    * @see ./edit.js
    */
-  edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"],
-  /**
-   * @see ./save.js
-   */
-  save: () => null
+  edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"]
 });
 
 /***/ }),

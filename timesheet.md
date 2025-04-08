@@ -26,4 +26,5 @@
 - single feature entry - 15 min
 - responsive updates - 2 hours
 - animations - 30 min
-  21 hours so far
+- final theme cleanup - 30 min
+  21.5 hours total
