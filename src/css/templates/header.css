@@ -1,3 +1,9 @@
+@media (max-width: 575.98px) {
+  #header #branding img {
+    max-width: 160px;
+    padding-top: 30px;
+  }
+}
 #header .menu-item {
   margin: auto 15px;
   color: var(--pcm-black);
@@ -32,6 +38,10 @@
   }
   #header .sub-menu .menu-item-container:last-child {
     margin-top: 0;
+  }
+  #header .navbar-collapse {
+    background: white;
+    padding: 1rem;
   }
 }
 @media (min-width: 1200px) {

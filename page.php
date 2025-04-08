@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class( 'masthead' ); ?>>
 		<header class="header">
 			<?php if ( ! get_post_meta( get_the_ID(), 'hide_header', true ) ) : ?>
 				<h1 class="entry-title" itemprop="name"><?php the_title(); ?></h1>

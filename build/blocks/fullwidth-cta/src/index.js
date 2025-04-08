@@ -8,7 +8,7 @@
   \*************************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/fullwidth-cta","version":"0.1.0","title":"Fullwidth CTA","category":"widgets","textdomain":"fullwidth-cta","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./template.php","attributes":{"headingStart":{"type":"string","default":""},"pinkText":{"type":"string","default":""},"headingEnd":{"type":"string","default":""},"subheadingText":{"type":"string","default":""},"inputText":{"type":"string","default":""},"buttonText":{"type":"string","default":""}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/fullwidth-cta","version":"0.1.0","title":"Fullwidth CTA","category":"widgets","textdomain":"fullwidth-cta","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./template.php","attributes":{"backgroundColor":{"type":"string"},"textColor":{"type":"string"},"headingStart":{"type":"string","default":""},"pinkText":{"type":"string","default":""},"headingEnd":{"type":"string","default":""},"subheadingText":{"type":"string","default":""},"inputText":{"type":"string","default":""},"buttonText":{"type":"string","default":""}}}');
 
 /***/ }),
 
@@ -68,6 +68,8 @@ function Edit({
   setAttributes
 }) {
   const {
+    backgroundColor,
+    textColor,
     headingStart,
     pinkText,
     headingEnd,
@@ -75,10 +77,20 @@ function Edit({
     inputText,
     buttonText
   } = attributes;
+  const onChangeBackgroundColor = newBackgroundColor => {
+    setAttributes({
+      backgroundColor: newBackgroundColor
+    });
+  };
+  const onChangeTextColor = newTextColor => {
+    setAttributes({
+      textColor: newTextColor
+    });
+  };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
     ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)(),
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
         title: "Block Settings",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
           label: "Heading Start",
@@ -117,7 +129,19 @@ function Edit({
             buttonText: value
           })
         })]
-      })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.PanelColorSettings, {
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Color settings'),
+        initialOpen: false,
+        colorSettings: [{
+          value: textColor,
+          onChange: onChangeTextColor,
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Text color')
+        }, {
+          value: backgroundColor,
+          onChange: onChangeBackgroundColor,
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Background color')
+        }]
+      })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
       class: "container",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {

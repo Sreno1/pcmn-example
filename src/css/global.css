@@ -1,6 +1,16 @@
 @media (max-width: 991.98px) {
   .smallpaddingonmobile {
-    padding: 20px !important;
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+    max-width: unset !important;
+  }
+  .smallpaddingonmobile *:not(img) {
+    max-width: unset !important;
+  }
+  .smallmarginonmobile {
+    margin-left: 25px !important;
+    margin-right: 25px !important;
+    width: unset !important;
   }
 }
 .masthead {
@@ -24,6 +34,12 @@
 }
 .card-rounded {
   border-radius: 8px;
+}
+.card-hover:hover {
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.12);
+  transform: translateY(-5px);
 }
 
 .features .card-img-top {

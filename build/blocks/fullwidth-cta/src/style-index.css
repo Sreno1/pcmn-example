@@ -1,20 +1,23 @@
 /*!****************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/fullwidth-cta/src/style.scss ***!
   \****************************************************************************************************************************************************************************************************************************************************************/
-/**
- * The following styles get applied both on the front of your site
- * and in the editor.
- *
- * Replace them with your own styles or remove the file completely.
- */
 .fullwidth-cta {
   background: var(--pcm-light-gray);
 }
 .fullwidth-cta input {
   border-radius: 8px;
   height: 50px;
-  width: 22%;
   border: 1px solid var(--pcm-black);
+}
+@media (min-width: 1200px) {
+  .fullwidth-cta input {
+    width: 22%;
+  }
+}
+@media (min-width: 992px) {
+  .fullwidth-cta input {
+    width: 35%;
+  }
 }
 .fullwidth-cta input::-webkit-input-placeholder {
   position: absolute;
@@ -27,12 +30,38 @@
   font-size: 17px;
 }
 .fullwidth-cta h2 {
-  font-size: 48px;
+  max-width: 1200px;
+  font-size: calc(1.525rem + 3.3vw);
   font-weight: 500;
-  width: 45%;
+}
+@media (min-width: 1200px) {
+  .fullwidth-cta h2 {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 992px) {
+  .fullwidth-cta h2 {
+    width: 45%;
+  }
+}
+@media (min-width: 768px) {
+  .fullwidth-cta h2 {
+    font-size: 48px;
+    width: 70%;
+  }
 }
 .fullwidth-cta h3 {
-  font-size: 36px;
+  font-size: calc(1.425rem + 2.1vw);
+}
+@media (min-width: 992px) {
+  .fullwidth-cta h3 {
+    font-size: 36px;
+  }
+}
+@media (min-width: 1200px) {
+  .fullwidth-cta h3 {
+    font-size: 3rem;
+  }
 }
 
 /*# sourceMappingURL=style-index.css.map*/

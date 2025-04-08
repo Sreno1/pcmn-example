@@ -77,7 +77,6 @@ q:after {
 textarea, input[type="text"], input[type="button"], input[type="submit"], input[type="reset"], input[type="search"], input[type="password"] {
 	-webkit-appearance: none;
 	appearance: none;
-	border-radius: 0
 }
 
 input[type="search"] {
