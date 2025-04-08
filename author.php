@@ -8,7 +8,7 @@
 	<?php rewind_posts(); ?>
 </header>
 <?php while ( have_posts() ) : the_post(); ?>
-	<?php get_template_part( 'template-parts/entry' ); ?>
+	<?php get_template_part( 'template-parts/entry.php' ); ?>
 <?php endwhile; ?>
 <?php get_template_part( 'template-parts/nav', 'below' ); ?>
 <?php get_footer(); ?>

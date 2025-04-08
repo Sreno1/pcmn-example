@@ -13,9 +13,10 @@
 }
 
 .card-img-contain {
-  height: 70%;
+  height: 50%;
   object-fit: contain;
   padding: 25px;
+  align-content: center;
 }
 
 .card-shadow {
@@ -23,6 +24,14 @@
 }
 .card-rounded {
   border-radius: 8px;
+}
+
+.features .card-img-top {
+  max-height: 200px;
+  object-fit: contain;
+}
+.features .card-body {
+  height: 50%;
 }
 
 .dropdown-toggle::after {

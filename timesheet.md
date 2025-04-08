@@ -23,3 +23,5 @@
 - features post type & archive - 1hr 45min
 - typography fixes - 15 min
 - Theme cleanup, readme and screenshot - 15 min
+- single feature entry - 15 min
+  18.5 hours so far

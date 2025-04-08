@@ -18,9 +18,10 @@
 }
 
 .card-img-contain {
-	height: 70%;
+	height: 50%;
 	object-fit: contain;
 	padding: 25px;
+	align-content: center;
 }
 
 .card {
@@ -30,6 +31,19 @@
 
 	&-rounded {
 		border-radius: 8px;
+	}
+}
+
+.features {
+	.card {
+		&-img-top {
+			max-height: 200px;
+			object-fit: contain;
+		}
+
+		&-body {
+			height: 50%;
+		}
 	}
 }
 
