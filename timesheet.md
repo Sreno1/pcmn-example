@@ -24,4 +24,6 @@
 - typography fixes - 15 min
 - Theme cleanup, readme and screenshot - 15 min
 - single feature entry - 15 min
-  18.5 hours so far
+- responsive updates - 2 hours
+- animations - 30 min
+  21 hours so far

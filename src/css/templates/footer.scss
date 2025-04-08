@@ -34,7 +34,9 @@
 
 	.wp-block-buttons {
 		justify-content: space-around;
-		width: 75%;
+		@include media-breakpoint-up(xxl) {
+			width: 75%;
+		}
 	}
 
 	@include media-breakpoint-down(lg) {

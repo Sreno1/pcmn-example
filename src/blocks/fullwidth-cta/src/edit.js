@@ -11,8 +11,8 @@ import {__} from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
-import {useBlockProps, InspectorControls} from '@wordpress/block-editor';
-import {TextControl, TextareaControl, PanelBody} from '@wordpress/components';
+import {useBlockProps, InspectorControls, PanelColorSettings} from '@wordpress/block-editor';
+import {TextControl, PanelBody} from '@wordpress/components';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -32,6 +32,8 @@ import './editor.scss';
 export default function Edit({attributes, setAttributes}) {
 
 	const {
+		backgroundColor,
+		textColor,
 		headingStart,
 		pinkText,
 		headingEnd,
@@ -39,6 +41,14 @@ export default function Edit({attributes, setAttributes}) {
 		inputText,
 		buttonText
 	} = attributes;
+
+	const onChangeBackgroundColor = (newBackgroundColor) => {
+		setAttributes({backgroundColor: newBackgroundColor})
+	}
+
+	const onChangeTextColor = (newTextColor) => {
+		setAttributes({textColor: newTextColor})
+	}
 
 	return (
 
@@ -76,6 +86,22 @@ export default function Edit({attributes, setAttributes}) {
 						onChange={(value) => setAttributes({buttonText: value})}
 					/>
 				</PanelBody>
+				<PanelColorSettings
+					title={__('Color settings')}
+					initialOpen={false}
+					colorSettings={[
+						{
+							value: textColor,
+							onChange: onChangeTextColor,
+							label: __('Text color')
+						},
+						{
+							value: backgroundColor,
+							onChange: onChangeBackgroundColor,
+							label: __('Background color')
+						}
+					]}
+				/>
 			</InspectorControls>
 			<div class="container">
 				<div class="row">

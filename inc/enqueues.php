@@ -20,7 +20,7 @@ function pcmnnurture_enqueue_styles() {
 
 	// enqueue global css
 	wp_enqueue_style( 'global-style', STYLESHEET_DIR_URI . '/src/css/global.css' );
-	
+
 	// enqueue typography css
 	wp_enqueue_style( 'typography-style', STYLESHEET_DIR_URI . '/src/css/typography.css' );
 
@@ -40,5 +40,3 @@ function pcmnnurture_enqueue_styles() {
 	wp_enqueue_style( 'footer-style', STYLESHEET_DIR_URI . '/src/css/templates/footer.css' );
 
 }
-
-?>

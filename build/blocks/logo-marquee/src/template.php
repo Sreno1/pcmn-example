@@ -40,15 +40,18 @@ $images = array(
 );
 
 ?>
-<div class="logo-marquee container row p-4 pb-2 mb-3 pt-5 mt-4 text-center mx-auto">
-    <h3 class="text-center pb-3"><?= $introText ?></h3>
-	<?php for ( $i = 1; $i <= $num; $i ++ ) :
-		if ( ${"image{$i}Url"} === '' ) {
-			continue;
-		}
-		?>
-        <div class="col">
-            <img src="<?= ${"image{$i}Url"} ?>" alt="<?= ${"image{$i}Alt"} ?> "/>
-        </div>
-	<?php endfor; ?>
+<div class="logo-marquee container">
+	<h3 class="text-center pb-3 pt-5 mt-4"><?= $introText ?></h3>
+	<div class="row justify-content-center row-cols-1 row-cols-md-3 row-cols-lg-auto p-4 pb-2 mb-3 text-center mx-auto">
+		<?php for ( $i = 1; $i <= $num; $i ++ ) :
+			if ( ${"image{$i}Url"} === '' ) {
+				continue;
+			}
+			?>
+			<div class="col mt-4">
+				<img src="<?= ${"image{$i}Url"} ?>" alt="<?= ${"image{$i}Alt"} ?> "/>
+			</div>
+		<?php endfor; ?>
+	</div>
 </div>
+

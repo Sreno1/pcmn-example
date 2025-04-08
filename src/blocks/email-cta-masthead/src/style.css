@@ -1,11 +1,5 @@
-/**
- * The following styles get applied both on the front of your site
- * and in the editor.
- *
- * Replace them with your own styles or remove the file completely.
- */
 .email-cta-masthead {
-  margin-top: 6rem;
+  margin-top: -10rem;
 }
 .email-cta-masthead .masthead-main-content {
   background: var(--pcm-light-gray);
@@ -28,12 +22,35 @@
   border: 0;
 }
 .email-cta-masthead .masthead-main-content h2 {
-  font-size: 57px;
+  font-size: calc(1.525rem + 3.3vw);
+  text-align: center;
   font-weight: 500;
 }
+@media (min-width: 1200px) {
+  .email-cta-masthead .masthead-main-content h2 {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 992px) {
+  .email-cta-masthead .masthead-main-content h2 {
+    font-size: 57px;
+    text-align: left;
+  }
+}
 .email-cta-masthead .masthead-main-content p {
+  text-align: center;
   font-size: 20px;
   width: 80%;
+}
+@media (min-width: 992px) {
+  .email-cta-masthead .masthead-main-content p {
+    text-align: left;
+  }
+}
+@media (max-width: 991.98px) {
+  .email-cta-masthead .masthead-main-content p {
+    margin: 0 auto;
+  }
 }
 .email-cta-masthead .masthead-main-content .imgCol {
   text-align: center;
@@ -49,6 +66,18 @@
   text-align: center;
   font-size: 20px;
   font-weight: 500;
+}
+@media (max-width: 991.98px) {
+  .email-cta-masthead__form {
+    margin: 3rem 0;
+    text-align-last: center;
+  }
+  .email-cta-masthead__form button {
+    width: 80% !important;
+  }
+  .email-cta-masthead__form input {
+    width: 80% !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
