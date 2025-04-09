@@ -22,7 +22,7 @@ $marqueeText  = $attributes['marqueeText'];
 					<p><?= $contentText ?></p>
 					<div class="email-cta-masthead__form">
 						<div class="form-group">
-							<input id="email" name="email" class="inputText" type="text" required/>
+							<input id="email" name="email" class="inputText form-control" type="text" required/>
 							<label class="form-control-label" for="email"><?= $inputText ?></label>
 						</div>
 						<br/>

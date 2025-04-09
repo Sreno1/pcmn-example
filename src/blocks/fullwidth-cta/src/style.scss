@@ -8,11 +8,15 @@
 
 	.form-group {
 		margin: 0 auto;
-		@include media-breakpoint-up(xl) {
-			width: 22%;
+		@include media-breakpoint-up(md) {
+			width: 35%;
+			min-width: 400px;
 		}
 		@include media-breakpoint-up(lg) {
-			width: 35%;
+			width: 22%;
+		}
+		@include media-breakpoint-up(xl) {
+			width: 22%;
 		}
 	}
 
@@ -37,14 +41,15 @@
 		}
 		@include media-breakpoint-up(md) {
 			font-size: 48px;
-			width: 70%;
+			width: 60%;
 		}
 	}
 
 	h3 {
-		@include media-breakpoint-up(lg) {
+		@include font-size(2.5rem);
+
+		@include media-breakpoint-up(md) {
 			font-size: 36px;
 		}
-		@include font-size(3rem);
 	}
 }

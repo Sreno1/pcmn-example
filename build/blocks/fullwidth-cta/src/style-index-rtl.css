@@ -7,14 +7,20 @@
 .fullwidth-cta .form-group {
   margin: 0 auto;
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .fullwidth-cta .form-group {
-    width: 22%;
+    width: 35%;
+    min-width: 400px;
   }
 }
 @media (min-width: 992px) {
   .fullwidth-cta .form-group {
-    width: 35%;
+    width: 22%;
+  }
+}
+@media (min-width: 1200px) {
+  .fullwidth-cta .form-group {
+    width: 22%;
   }
 }
 .fullwidth-cta input {
@@ -45,19 +51,19 @@
 @media (min-width: 768px) {
   .fullwidth-cta h2 {
     font-size: 48px;
-    width: 70%;
+    width: 60%;
   }
 }
 .fullwidth-cta h3 {
-  font-size: calc(1.425rem + 2.1vw);
-}
-@media (min-width: 992px) {
-  .fullwidth-cta h3 {
-    font-size: 36px;
-  }
+  font-size: calc(1.375rem + 1.5vw);
 }
 @media (min-width: 1200px) {
   .fullwidth-cta h3 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .fullwidth-cta h3 {
+    font-size: 36px;
   }
 }
